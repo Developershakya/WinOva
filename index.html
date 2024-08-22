@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.btn1').click(function(){
+          $('.wrapper-alert').css("display", "none");
+        });
+        $('.btn2').click(function(){
+          $('.wrapper-alert').css("display", "none");
+        });
+   
+       
+
+     
+      });
+      
+
+    </script>
+    <title>Winova</title>
+  </head>
+  <body>
+    <div class="header">
+      <nav class="navigation">
+        <h2 class="logo"><a href="/">WinOva</a></h2>
+
+        <div class="links" id="nav-links">
+          <a class="link" href="/">home</a>
+          <a class="link" href="/">about</a>
+          <a class="link" href="/">contact</a>
+          <button class="delete-btn">DELETE</button><span>ACCOUNT</span>
+        </div>
+        <div class="hamburger" id="hamburger">
+          &#9776;
+          <!-- Hamburger Icon -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="wrapper">
+      <span class="icon-close">
+        <ion-icon name="close"></ion-icon>
+      </span>
+      <div class="form-box login">
+        <h2>Delete Account</h2>
+        <form action="/" class="my_form">
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="person"></ion-icon>
+            </span>
+            <input type="text" required / id="name">
+            <label for="">Name</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="mail" ></ion-icon>
+            </span>
+            <input type="email" required id="email"/>
+            <label for="">Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="phone-portrait"></ion-icon>
+            </span>
+            <input type="number" id="phone-number" min="1000000000" max="9999999999" step="1"  required id="phone-number" />
+            <label for="">Number</label>
+          </div>
+          
+            <div class="select-menu">
+              <div class="select-btn">
+                <span class="sBtn-text">Select Your Reason</span>
+                <ion-icon name="play"></ion-icon>
+              </div>
+              <ul class="options">
+                <li class="option">
+                  <span class="option-text">Technical Issues</span>
+                </li>
+                <li class="option">
+                  <span class="option-text">No Longer Needed</span>
+                </li>
+              </ul>
+              <input type="hidden" id="selectedReason" name="reason" required />
+            </div>
+            <div id="error-message" class="error"></div>
+            <div class="rember-forget">
+              <label for=""
+                ><input type="checkbox" /> Once Account deleted you can't
+                login</label
+              >
+            </div>
+          
+        </form>
+        <button id="sure" class="btn">Delete</button>
+      </div>
+    </div>
+    <div class="wrapper-alert">
+    <div class="popup_box">
+      <ion-icon name="alert-circle-outline"></ion-icon>
+      <h1>Your account will be deleted Permanently!</h1>
+      <label>Are you sure to proceed?</label>
+      <div class="btns">
+        <a href="#" class="btn1">Cancel Process</a>
+        <a href="#" id="confirm-btn" class="btn2">Delete Account</a>
+      </div>
+    </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "OFjntmOgAy_Z1_PN3",
+        });
+      })();
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
