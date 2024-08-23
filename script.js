@@ -1,5 +1,6 @@
 const links = document.getElementById("nav-links");
 const wrapper = document.querySelector(".wrapper");
+const hamburger =document.getElementById("hamburger");
 const iconClose = document.querySelector(".icon-close");
 let optionMenu = document.querySelector(".select-menu"),
   selectBtn = document.querySelector(".select-btn"),
@@ -27,15 +28,27 @@ document.querySelector(".delete-btn").addEventListener("click", () => {
   } else {
     wrapper.classList.add("active-popup");
   }
+  if (hamburger.textContent.trim() === '☰') {
+    hamburger.textContent = '✗'; // Change to cross icon
+} else {
+    hamburger.textContent = '☰'; // Change back to hamburger icon
+}
 });
 iconClose.addEventListener("click", () => {
   wrapper.classList.remove("active-popup");
 });
 
 // ------------MEDAI QUERY------------
-document.getElementById("hamburger").addEventListener("click", function () {
+hamburger.addEventListener("click", function () {
   links.classList.toggle("active");
-});
+  if (this.textContent.trim() === '☰') {
+    this.textContent = '✗'; // Change to cross icon
+} else {
+    this.textContent = '☰'; // Change back to hamburger icon
+}
+}
+
+);
 
 // ---------------dropdown----------------------
 
