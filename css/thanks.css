@@ -56,6 +56,7 @@ body {
     font-size: 45px;
     text-transform: uppercase;
     text-align: center;
+  
     line-height: 75px;
 
 }
@@ -253,4 +254,53 @@ position: relative;
         transform: rotate(360deg) translate(0,135px); 
         opacity: 0;
      }
+}
+
+
+
+
+@media (max-width: 768px){
+
+    .text-container h1 {
+        color: #fff;
+        font-size: 70px;
+        font-weight: 900;
+        text-align: center;
+        line-height: 80px;
+    }
+    
+    .text-container h1 span {
+        font-size: 50px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .animation-container{
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 600px;
+        height: 450px;
+    }
+    .text-container .animated-text {
+        position: relative;
+        background: #4385F4;
+        margin-top: 15px;
+        width: 370px;
+        height: 75px;
+        box-shadow: 0 0 10px #4385F4,
+            0 0 120px #4285F4;
+            overflow: hidden;
+    
+    }
+    .text-container .animated-text h2 {
+        color: #fff;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-align: center;
+
+        line-height: 65px;
+    
+    }
 }
